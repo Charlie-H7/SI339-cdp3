@@ -1,0 +1,239 @@
+/* body {
+    background-color: darkgray;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 5vw;
+
+}
+.nav-list li {
+    display: inline-block;
+}
+#nav-bar {
+    width: 100vw;
+
+    background-color: white;
+} */
+
+/* Reset default padding and margin */
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color: #F5F5DC;
+}
+
+/* Full-width navigation container */
+#nav-bar {
+    width: 100%;
+    background-color: black; /* Background color for entire navbar */
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/* Navbar list styling */
+.nav-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-around; /* Spaces items evenly */
+}
+
+/* Navbar items */
+.nav-list li {
+    flex: 1;
+    text-align: center;
+    /* background-color: black;*/ /*Background color for individual items */
+    padding: 15px 0; /* Increase padding for better spacing */
+    /* border-bottom-left-radius: 25px; */
+    /* border-bottom-right-radius: 25px; */
+}
+
+/* Links styling */
+.nav-list li a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-list li label{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* block for team info */
+.team-info {
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50vw;
+    background-color: darkgray;
+    border-radius: 25px;
+    text-align: center;
+}
+
+
+
+/* Athlete */
+.athlete-info {
+    border-bottom: solid 1px black;
+    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+    width: 50vw;
+    text-align: center; /* Center stuff in middle of screen */
+}
+
+.athlete-photo {
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+
+/* Season Record */
+.sr-container {
+    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+    width: 90vw;
+    text-align: center;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border-radius: 25px; /* Rounding for the container */
+}
+
+.sr-container table {
+
+    border-spacing: 0; 
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.sr-container tr, .sr-container td {
+    border: 1px solid #333; /* Border for cells */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Color the rows */
+.sr-container tbody tr:nth-child(2n+1) {
+    background-color: white;
+}
+
+/* Alternate color rows */
+.sr-container tbody tr:nth-child(2n) {
+    background-color: #F5F5DC;
+}
+
+/* Add color to header row */
+.sr-container thead tr {
+    background-color: gray;
+    font-size: 9px; /* Set font size for header */
+}
+
+/* Header cell styling for sr-container */
+.sr-container thead th {
+    border: 1px solid #333; /* Border for header cells (i hated this part :'v)*/
+    padding: 10px; /* Internal padding */
+}
+
+/* Round top corners of header */
+.sr-container thead th:first-child {
+    border-top-left-radius: 25px; /* Round top-left corner */
+}
+
+.sr-container thead th:last-child {
+    border-top-right-radius: 25px; /* Round top-right corner */
+}
+
+/* Career Record */
+.cr-container {
+    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+    width: 90vw;
+    text-align: center;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border-radius: 25px; /* Rounding for the container */
+}
+
+.cr-container table {
+
+    border-spacing: 0;
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.cr-container tr, .cr-container td {
+    border: 1px solid #333; /* Border for cells */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Color the rows */
+.cr-container tbody tr:nth-child(2n+1) {
+    background-color: white;
+}
+
+/* Alternate color rows */
+.cr-container tbody tr:nth-child(2n) {
+    background-color: #F5F5DC;
+}
+
+/* Add color to header row */
+.cr-container thead tr {
+    background-color: gray;
+    font-size: 9px; /* Set font size for header */
+}
+
+/* Header cell styling for sr-container */
+.cr-container thead th {
+    border: 1px solid #333; /* Border for header cells */
+    padding: 10px;
+}
+
+/* Round top corners of header */
+.cr-container thead th:first-child {
+    border-top-left-radius: 25px; /* Round top-left corner */
+}
+
+.cr-container thead th:last-child {
+    border-top-right-radius: 25px; /* Round top-right corner */
+}
+
+
+
+h3 {
+    text-align: center;
+}
+
+
+/* Make comments scrollable since large */
+.comment-segment {
+
+    overflow-y: scroll;  /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    white-space: nowrap; /* Prevent text wrapping if desired */
+    text-align: center; /* Center align text if needed */
+}
+
+
+/* Hide date and comments if screen small */
+@media (max-width: 600px) {
+    .date {
+        display: none;
+    }
+
+
+    .comments {
+        display: none;
+    }
+
+    
+}
