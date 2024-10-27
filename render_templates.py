@@ -310,7 +310,7 @@ student_html_template = f"""
             <nav>
                 <ul class="nav-list">
                     <li>            
-                        <a href="https://www.athletic.net/"><img id="site-logo" src="/images/site_logo.svg" alt="site logo" width="175" height="26"> <!-- IMG TK--></a>
+                        <a href="https://www.athletic.net/"><img id="site-logo" src="../images/site_logo.svg" alt="site logo" width="175" height="26"> <!-- IMG TK--></a>
                     </li>
                     <li><a href="https://www.google.com/">login</a></li>
                     <li>
@@ -330,7 +330,7 @@ student_html_template = f"""
         <!--Main box-->
             <!--Main box 1-->
         <div class="team-info">
-            <img src="/images/aa_skyline.jpg" class="team-logo" alt="team insert name logo" width="175" height="175">
+            <img src="../images/aa_skyline.jpg" class="team-logo" alt="team insert name logo" width="175" height="175">
             <h1>Ann Arbor Skyline</h1>
             <div> 48104, MI </div>
         </div>
