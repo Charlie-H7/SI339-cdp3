@@ -228,7 +228,7 @@ def render_student_html(athlete_dict, template_html):
             src="../images/AthleteImages/{athlete_dict['id'][0]}.jpg" 
             alt="img of {athlete_dict['name'][0]}, id: {athlete_dict['id']}" 
             width="150" height="150" 
-            onerror="this.onerror=null; this.src='/images/default_image.jpg';"
+            onerror="this.onerror=null; this.src='../images/default_image.jpg';"
             class="athlete-photo"
         >
         <h2>{athlete_dict['name'][0]}</h2>
@@ -300,7 +300,7 @@ student_html_template = f"""
         <link rel="stylesheet" type="text/css" href="../css/student_style.css">
         <title>Deliverable 3</title> <!--Title TK-->
 
-        <link rel="icon" type=../images/icon.png" href="/images/icon.png">
+        <link rel="icon" type=/images/icon.png" href="/images/icon.png">
     </head>
     <body>
         
