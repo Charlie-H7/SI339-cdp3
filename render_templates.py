@@ -225,7 +225,7 @@ def render_student_html(athlete_dict, template_html):
     temp_html = f"""
     <div class="athlete-info">
         <img 
-            src="/images/AthleteImages/{athlete_dict['id'][0]}.jpg" 
+            src="images/AthleteImages/{athlete_dict['id'][0]}.jpg" 
             alt="img of {athlete_dict['name'][0]}, id: {athlete_dict['id']}" 
             width="150" height="150" 
             onerror="this.onerror=null; this.src='/images/default_image.jpg';"
