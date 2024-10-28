@@ -155,26 +155,26 @@ thead th:last-child {
 }
 
 #fab {
-    position: fixed;          /* Fix position on screen */
-    bottom: 20px;            /* Space from the bottom */
-    right: 20px;             /* Space from the right */
-    width: 56px;             /* Diameter of the FAB */
-    height: 56px;            /* Diameter of the FAB */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
     background-color: #3498db; /* Button color */
     color: white;            /* Text color */
-    border: none;            /* No border */
+    border: none;
     border-radius: 50%;      /* Circular shape */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for elevation */
     font-size: 24px;         /* Icon size */
-    display: flex;           /* Center icon */
-    justify-content: center; /* Center icon */
-    align-items: center;     /* Center icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;    /* Remove underline from link */
 }
 
 #home-button {
     display: inline-block;           /* Makes the link behave like a button */
-    padding: 10px 20px;              /* Adds padding for button appearance */
+    padding: 10px 20px;
     background-color: #1B587E;       /* Button color */
     color: white;                    /* Text color */
     text-align: center;              /* Center text inside the button */
@@ -183,7 +183,7 @@ thead th:last-child {
     font-weight: bold;               /* Bold text */
     font-size: 16px;                 /* Font size */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s;
 }
 
 #home-button:hover {
@@ -200,7 +200,7 @@ h3 {
 
     overflow-y: scroll;  /* Enable vertical scrolling */
     overflow-x: hidden; /* Hide horizontal overflow */
-    white-space: nowrap; /* Prevent text wrapping if desired */
+    white-space: nowrap; 
     text-align: center; /* Center align text if needed */
 }
 
@@ -359,9 +359,9 @@ body.high-contrast h3{
     width: 100%;                /* Full width */
     background-color: #e0e0e0;   /* Light grey background */
     border-radius: 10px;         /* Rounded corners */
-    overflow: hidden;            /* Clips the progress bar within the container */
+    overflow: hidden;            
     height: 20px;                /* Height of the progress bar */
-    margin: 20px 0;              /* Some spacing around the bar */
+    margin: 20px 0; 
 }
 
 /* Progress bar itself */
@@ -385,4 +385,8 @@ body.high-contrast h3{
 
 #goal {
     padding-bottom: 1vw;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }

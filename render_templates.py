@@ -100,7 +100,8 @@ index_html_template = f"""
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deliverable</title> <!--Title TK-->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="images/icon.png" href="images/icon.png">
 
 </head>
@@ -304,6 +305,7 @@ student_html_template = f"""
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
         <link rel="stylesheet" type="text/css" href="../css/student_style.css">
         <title>Deliverable 3</title> <!--Title TK-->
 
