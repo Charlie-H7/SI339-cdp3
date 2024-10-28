@@ -1,27 +1,14 @@
-/* body {
-    background-color: darkgray;
-}
-
-.nav-list {
-    list-style-type: none;
-    display: flex;
-    gap: 5vw;
-
-}
-.nav-list li {
-    display: inline-block;
-}
-#nav-bar {
-    width: 100vw;
-
-    background-color: white;
-} */
 
 /* Reset default padding and margin */
 body, html {
     padding: 0;
     margin: 0;
     background-color: #F5F5DC;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Full-width navigation container */
@@ -92,7 +79,9 @@ body, html {
 .athlete-photo {
     border-radius: 50%;
     object-fit: cover; 
+    box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.5);
 }
+
 
 
 /* Season Record */
@@ -106,7 +95,7 @@ body, html {
     border-radius: 25px; /* Rounding for the container */
 }
 
-.sr-container table {
+table {
 
     border-spacing: 0; 
     width: auto;
@@ -114,40 +103,41 @@ body, html {
     text-align: center;
 }
 
-.sr-container tr, .sr-container td {
+tr, td {
     border: 1px solid #333; /* Border for cells */
     padding: 10px;
     text-align: left;
+    font-size: 13px;
 }
 
 /* Color the rows */
-.sr-container tbody tr:nth-child(2n+1) {
+tbody tr:nth-child(2n+1) {
     background-color: white;
 }
 
 /* Alternate color rows */
-.sr-container tbody tr:nth-child(2n) {
+tbody tr:nth-child(2n) {
     background-color: #F5F5DC;
 }
 
 /* Add color to header row */
-.sr-container thead tr {
+thead tr {
     background-color: gray;
-    font-size: 9px; /* Set font size for header */
+    /* font-size: 12px; Set font size for header */
 }
 
 /* Header cell styling for sr-container */
-.sr-container thead th {
+thead th {
     border: 1px solid #333; /* Border for header cells (i hated this part :'v)*/
     padding: 10px; /* Internal padding */
 }
 
 /* Round top corners of header */
-.sr-container thead th:first-child {
+thead th:first-child {
     border-top-left-radius: 25px; /* Round top-left corner */
 }
 
-.sr-container thead th:last-child {
+thead th:last-child {
     border-top-right-radius: 25px; /* Round top-right corner */
 }
 
@@ -158,56 +148,47 @@ body, html {
     margin-top: 20px;
     width: 90vw;
     text-align: center;
-    overflow-y: scroll; /* Enable vertical scrolling */
+    max-height: 300px; /* need for scrollable */
+    overflow-y: scroll;
     border-radius: 25px; /* Rounding for the container */
+    height: 400px; /* Set a fixed height for scrolling */
 }
 
-.cr-container table {
-
-    border-spacing: 0;
-    width: auto;
-    margin: auto;
-    text-align: center;
+#fab {
+    position: fixed;          /* Fix position on screen */
+    bottom: 20px;            /* Space from the bottom */
+    right: 20px;             /* Space from the right */
+    width: 56px;             /* Diameter of the FAB */
+    height: 56px;            /* Diameter of the FAB */
+    background-color: #3498db; /* Button color */
+    color: white;            /* Text color */
+    border: none;            /* No border */
+    border-radius: 50%;      /* Circular shape */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for elevation */
+    font-size: 24px;         /* Icon size */
+    display: flex;           /* Center icon */
+    justify-content: center; /* Center icon */
+    align-items: center;     /* Center icon */
+    text-decoration: none;    /* Remove underline from link */
 }
 
-.cr-container tr, .cr-container td {
-    border: 1px solid #333; /* Border for cells */
-    padding: 10px;
-    text-align: left;
+#home-button {
+    display: inline-block;           /* Makes the link behave like a button */
+    padding: 10px 20px;              /* Adds padding for button appearance */
+    background-color: #1B587E;       /* Button color */
+    color: white;                    /* Text color */
+    text-align: center;              /* Center text inside the button */
+    text-decoration: none;           /* Remove underline */
+    border-radius: 8px;              /* Rounded corners */
+    font-weight: bold;               /* Bold text */
+    font-size: 16px;                 /* Font size */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-/* Color the rows */
-.cr-container tbody tr:nth-child(2n+1) {
-    background-color: white;
+#home-button:hover {
+    background-color: red;
 }
-
-/* Alternate color rows */
-.cr-container tbody tr:nth-child(2n) {
-    background-color: #F5F5DC;
-}
-
-/* Add color to header row */
-.cr-container thead tr {
-    background-color: gray;
-    font-size: 9px; /* Set font size for header */
-}
-
-/* Header cell styling for sr-container */
-.cr-container thead th {
-    border: 1px solid #333; /* Border for header cells */
-    padding: 10px;
-}
-
-/* Round top corners of header */
-.cr-container thead th:first-child {
-    border-top-left-radius: 25px; /* Round top-left corner */
-}
-
-.cr-container thead th:last-child {
-    border-top-right-radius: 25px; /* Round top-right corner */
-}
-
-
 
 h3 {
     text-align: center;
@@ -223,6 +204,12 @@ h3 {
     text-align: center; /* Center align text if needed */
 }
 
+th {
+    background: gray;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+  }
 
 /* Hide date and comments if screen small */
 @media (max-width: 600px) {
@@ -236,4 +223,166 @@ h3 {
     }
 
     
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* DARK MODE PROFILE */
+
+body.dark-mode{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+
+body.dark-mode thead th{
+    padding: 10px; /* Internal padding (actually keeps it in theader)*/
+    margin: 0;
+    background-color: green;
+    color: white;
+}
+
+body.dark-mode .nav-list {
+    width: 100%;
+    background-color: black; /* Background color for entire navbar */
+    border: 1px solid orangered;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/* block for team info */
+body.dark-mode .team-info {
+    border: 1px solid orangered;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50vw;
+    background-color: rgb(60, 60, 60);
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+}
+
+/* Athlete */
+body.dark-mode .athlete-info {
+    border-bottom: solid 1px orangered;
+    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+    width: 50vw;
+    text-align: center; /* Center stuff in middle of screen */
+    color: white;
+}
+
+body.dark-mode .athlete-photo {
+    border-radius: 50%;
+    object-fit: cover; 
+    border: solid 2px orangered;
+}
+
+
+body.dark-mode h3{
+    color: white;
+}
+
+
+
+
+/* HIGH CONTRAST MODE PROFILE */
+
+body.high-contrast{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+
+body.high-contrast thead th{
+    padding: 10px; /* Internal padding (actually keeps it in theader)*/
+    margin: 0;
+    background-color: green;
+    color: white;
+}
+
+body.high-contrast .nav-list {
+    width: 100%;
+    background-color: black; /* Background color for entire navbar */
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/* block for team info */
+body.high-contrast .team-info {
+    border: 1px solid orangered;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50vw;
+    background-color: rgb(60, 60, 60);
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+}
+
+/* Athlete */
+body.high-contrast .athlete-info {
+    border-bottom: solid 1px orangered;
+    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+    width: 50vw;
+    text-align: center; /* Center stuff in middle of screen */
+    color: black;
+}
+
+body.high-contrast .athlete-photo {
+    border-radius: 50%;
+    object-fit: cover; 
+    border: solid 2px orangered;
+}
+
+
+body.high-contrast h3{
+    color: black;
+}
+
+
+/* Animation */
+/* Progress bar container */
+.progress-container {
+    width: 100%;                /* Full width */
+    background-color: #e0e0e0;   /* Light grey background */
+    border-radius: 10px;         /* Rounded corners */
+    overflow: hidden;            /* Clips the progress bar within the container */
+    height: 20px;                /* Height of the progress bar */
+    margin: 20px 0;              /* Some spacing around the bar */
+}
+
+/* Progress bar itself */
+.progress-bar {
+    width: 0%;
+    height: 100%;                /* Full height */
+    background-color: #3498db;   /* Bar color */
+    border-radius: 10px;         /* Rounded corners */
+    animation: progressAnimation 3s ease-in-out forwards infinite; /* Animation */
+}
+
+/* Keyframes for animation */
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;              /* Target width (80% in this example) */
+    }
+}
+
+#goal {
+    padding-bottom: 1vw;
 }

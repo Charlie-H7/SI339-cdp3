@@ -100,7 +100,7 @@ index_html_template = f"""
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deliverable</title> <!--Title TK-->
-
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="icon" type="images/icon.png" href="images/icon.png">
 
 </head>
@@ -233,16 +233,22 @@ def render_student_html(athlete_dict, template_html):
         >
         <h2>{athlete_dict['name'][0]}</h2>
         {athlete_dict['id'][0]}
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        <div id="goal">Personal mile goal met</div>
     </div>
+
     
     <h3>Season Record</h3>
     <div class="sr-container">
         <table class="sr-table">
             <thead>
                 <tr>
-                    <th class="table-header">Overall Place</th>
-                    <th class="table-header">Grade</th>
-                    <th class="table-header">Time</th>
+                    <th class="table-header">Overall Place 🥇</th>
+                    <th class="table-header">Grade 🎓</th>
+                    <th class="table-header">Time 🕕</th>
                 </tr>
             </thead>
             <tbody>
@@ -254,30 +260,31 @@ def render_student_html(athlete_dict, template_html):
     
     <h3>Career Record</h3>
     <div class=cr-container>
-        <table class="cr-table">
+        <table class="cr-table" tabindex="0">
             <thead>
                 <tr>
-                    <th class="table-header">Overall Place</th>
-                    <th class="table-header">Time</th>
-                    <th class="table-header date">Date</th>
-                    <th class="table-header">Meet</th>
-                    <th class="table-header comments">Comments</th>
+                    <th class="table-header">Overall Place 🥇</th>
+                    <th class="table-header">Time 🕕</th>
+                    <th class="table-header date">Date 📅</th>
+                    <th class="table-header">Meet 🏃‍♀️</th>
+                    <th class="table-header comments">Comments 💬</th>
                 </tr>
             </thead>
             <tbody>
                 {career_record(athlete_dict)}
             </tbody>
         </table>
-
+    </div>
+        
         <footer>
             <nav>
-                <ul>
+                <ul class="nav-list">
                     <!-- Added button functionality to return to home page -->
-                    <li><a href="/"><button type="button">Go Home</button></a></li>
+                    <li><a id="home-button" href="/">Go Home</a></li>
                 </ul> 
             </nav>
         </footer>
-    </div>
+        <a id="fab" href="#nav-bar" class="fab">↑</a>
     </body>
 </html>
     """
@@ -315,10 +322,10 @@ student_html_template = f"""
                     <li><a href="https://www.google.com/">login</a></li>
                     <li>
                         <label for="theme-select">Choose a theme:</label>
-                            <select id="theme-select" onchange="switchTheme()">
-                                <option value="default">Default Mode</option>
-                                <option value="low-contrast">Low Contrast Mode</option>
-                                <option value="dark-mode"Dark Mode</option>
+                            <select id="theme-select" class="theme-switch" onchange="document.body.className = this.value">
+                                <option value="default">Default</option>
+                                <option value="dark-mode">Dark Mode</option>
+                                <option value="high-contrast">High Contrast</option>
                             </select>
                     </li>
 
