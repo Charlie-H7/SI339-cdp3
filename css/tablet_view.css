@@ -1,0 +1,26 @@
+/* Hide date and comments if screen small */
+@media (min-width: 600px) {
+    .date {
+        display: none;
+    }
+
+
+    .comment-segment {
+        display: block;
+    }
+
+    .comments {
+        visibility: visible;
+    }
+
+    
+    .nav-list {
+        flex-direction: row;
+    }
+/* 
+    .nav-list li a{
+        width: 1fr;
+    } */
+
+}
+

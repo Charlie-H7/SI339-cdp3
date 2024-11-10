@@ -11,6 +11,18 @@ a {
     color: black;
 }
 
+/* Hide hamburger for mobile (default) view */
+.hamburger {
+    visibility: hidden;
+    /* font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 1rem; */
+  }
+  
+
 /* Full-width navigation container */
 #nav-bar {
     width: 100%;
@@ -22,6 +34,7 @@ a {
 /* Navbar list styling */
 .nav-list {
     display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -212,18 +225,20 @@ th {
   }
 
 /* Hide date and comments if screen small */
-@media (max-width: 600px) {
+
     .date {
-        display: none;
+        /* display: none; */
+        visibility: hidden;
     }
 
 
     .comments {
-        display: none;
+        /* display: none; */
+        visibility: hidden;
     }
 
     
-}
+
 
 @media (prefers-reduced-motion: reduce) {
     * {
