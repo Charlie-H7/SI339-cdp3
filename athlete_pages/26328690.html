@@ -5,17 +5,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../css/reset.css">
+        <link rel="stylesheet" href="../dist/css/lightbox.css">
         <link rel="stylesheet" type="text/css" href="../css/student_style.css">
-        <title>Deliverable 3</title> <!--Title TK-->
+        <link rel="stylesheet" type="text/css" href="../css/tablet_view.css">
+        <link rel="stylesheet" type="text/css" href="../css/desktop_view.css">
+        <title>Deliverable 4</title> <!--Title TK-->
 
-        <link rel="icon" type=/images/icon.png" href="/images/icon.png">
+        <link rel="icon" type="/images/icon.png" href="/images/icon.png">
     </head>
     <body>
         
     
         <!--nav bar-->
         <div id="nav-bar">
+
+
             <nav>
+
                 <ul class="nav-list">
                     <li>            
                         <a href="https://www.athletic.net/"><img id="site-logo" src="../images/site_logo.svg" alt="site logo" width="175" height="26"> <!-- IMG TK--></a>
@@ -38,7 +44,9 @@
         <!--Main box-->
             <!--Main box 1-->
         <div class="team-info">
-            <img src="../images/aa_skyline.jpg" class="team-logo" alt="team insert name logo" width="175" height="175">
+            <a href="../images/aa_skyline.jpg" data-lightbox="team_logo" data-title="Team Logo">
+                <img src="../images/aa_skyline.jpg" class="team-logo" alt="team insert name logo" width="175" height="175">
+            </a>
             <h1>Ann Arbor Skyline</h1>
             <div> 48104, MI </div>
         </div>
@@ -46,13 +54,16 @@
 
 
     <div class="athlete-info">
-        <img 
-            src="../images/AthleteImages/26328690.jpg" 
-            alt="img of Lucia Llanes, id: ['26328690']" 
-            width="150" height="150" 
-            onerror="this.onerror=null; this.src='../images/default_image.jpg';"
-            class="athlete-photo"
-        >
+        <a href="../images/AthleteImages/26328690.jpg" data-lightbox="26328690" data-title="Athlete: Lucia Llanes">
+            <img 
+                src="../images/AthleteImages/26328690.jpg" 
+                alt="img of Lucia Llanes, id: ['26328690']" 
+                width="150" height="150" 
+               
+                class="athlete-photo"
+
+            >
+        </a>
         <h2>Lucia Llanes</h2>
         26328690
 
@@ -129,6 +140,10 @@
             </nav>
         </footer>
         <a id="fab" href="#nav-bar" class="fab">↑</a>
+
+        <script src="../js/func.js"></script>
+
+        <script src="../dist/js/lightbox-plus-jquery.js"></script>
     </body>
 </html>
     
